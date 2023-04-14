@@ -14,14 +14,14 @@ module.exports = {
     output: {
         path: path.resolve(__dirname, 'dist'),
         clean: true,
-        filename: 'script.js',
+        filename: 'script.[contenthash].js',
     },
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, 'src', 'index.html')
         }),
         new MiniCssExtractPlugin({
-            filename: 'style.css',
+            filename:'style.[contenthash].css',
         })
     ],
     module: {
